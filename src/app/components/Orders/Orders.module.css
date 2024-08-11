@@ -1,0 +1,37 @@
+.tabList {
+    display: flex;
+}
+
+.tab {
+    flex-basis: 25%;
+    border: none;
+    background: hsla(0,0%,100%,.01);
+    padding: 12px;
+    min-width: 105px;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab:hover {
+    background: hsla(0,0%,100%,.03);
+}
+
+.activeTab,
+.activeTab:hover {
+    background: hsla(0,0%,100%,.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.tabPanel {
+    background: hsla(0,0%,100%,.05);
+    padding: 16px;
+    border-radius: 0 0 10px 10px;
+}
+
