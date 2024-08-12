@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Figtree, Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={figtree.className}>{children}</body>
+      <body className={figtree.className}>
+        <Header />
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

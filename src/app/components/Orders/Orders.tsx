@@ -27,7 +27,7 @@ export default function Orders ({ orders }: OrdersProps) {
                                 aria-controls={`order-${index}`}
                                 onClick={() => setActiveTab(index)}
                             >
-                                <span>Order {index}</span>
+                                <span>Order {index + 1}</span>
                             </button>
                         ))
                     }

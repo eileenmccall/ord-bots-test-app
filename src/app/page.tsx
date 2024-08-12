@@ -1,7 +1,4 @@
-import BalancePane from "./components/balancePane";
-import Header from "./components/Header/Header";
-import Nav from "./components/Nav/Nav";
-import OrderPane from "./components/orderPane";
+import Balance from "./components/Balance/Balance";
 import Orders from "./components/Orders/Orders";
 import styles from "./page.module.css";
 import { getAllOrders, getOrder } from "./utils/orders";
@@ -11,11 +8,8 @@ export default async function Home() {
 
   return (
       <main className={styles.main}>
-        <Header />
-        <Nav />
         <Orders orders={orders} />
-        <hr />
-        <BalancePane />
+        <Balance />
       </main>
   );
 }

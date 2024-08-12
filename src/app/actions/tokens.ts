@@ -1,9 +1,11 @@
 "use server";
-import {Coin} from "../types/coin.type";
+import { Token} from "../types/token.type";
 
-export async function getCoin(address: string): Promise<Coin> {
-    const apiPath = "https://api.ordinalsbot.com/opi/v1/brc20/get_current_balance_of_wallet"
-    const queryPath = `${apiPath}?address=${address}`
+export async function getToken(ticker: string): Promise<Token> {
+    const apiPath = "https://api.ordinalsbot.com/opi/v1/brc20/ticker_info"
+    const queryPath = `${apiPath}?ticker=${ticker}`
+
+    console.log(ticker);
 
     var headers: HeadersInit = new Headers();
     headers.set("x-api-key", process.env.API_KEY || "");
@@ -14,5 +16,7 @@ export async function getCoin(address: string): Promise<Coin> {
         headers
     })
     var data = await res.json();
-    return data.result[1] as Coin;
+
+    console.log(data);
+    return data.result as Token;
 }

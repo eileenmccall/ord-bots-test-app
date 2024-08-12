@@ -1,11 +1,30 @@
-html, body {
-  height: 100%;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
 }
 
 body {
+  height: 100%;
+  font-size: 16px;
   background: linear-gradient(15deg, rgb(29, 38, 113), rgb(59, 151, 93));
+  margin: 0;
+  padding: 30px 0;
+  min-height: 100vh;
+  overscroll-behavior: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, button {
+h1, h2, h3, h4, h5, h6, a, button {
+  color: white;
+  font-weight: 700;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+p, dd, dt {
   color: white;
 }
