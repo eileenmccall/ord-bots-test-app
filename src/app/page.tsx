@@ -4,7 +4,6 @@ import { getAllOrders } from "./utils/orders";
 
 export default async function Home() {
   const orders = await getAllOrders();
-  console.log("home page rendered");
 
   return (
       <>
