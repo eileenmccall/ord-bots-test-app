@@ -25,6 +25,7 @@ section {
   margin-bottom: 32px;
 }
 
-p, dd, dt {
+p, dd, dt, ul {
   color: white;
+  line-height: 1.6;
 }

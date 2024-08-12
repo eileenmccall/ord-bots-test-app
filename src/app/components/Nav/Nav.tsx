@@ -13,8 +13,8 @@ export default function Nav() {
             newTab: false
         },
         {
-            route: "/about",
-            label: "About",
+            route: "/retro",
+            label: "Project Retrospective",
             newTab: false
         },
         {

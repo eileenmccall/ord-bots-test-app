@@ -3,6 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
+import styles from "./styles.module.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +25,9 @@ export default function RootLayout({
       <body className={figtree.className}>
         <Header />
         <Nav />
-        {children}
+        <main className={styles.main}>
+          {children}
+        </main>
       </body>
     </html>
   );

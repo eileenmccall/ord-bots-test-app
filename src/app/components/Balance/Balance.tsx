@@ -14,13 +14,13 @@ export default function Balance() {
             <h2>Balance:</h2>
             <div className={styles.pane}>
                 <p>Check the balance of a BRC-20 token! Just enter the ticker of the token you want to view and push the big yellow button below!</p>
-                <h3>Coin address:</h3>
+                <h3>Token Ticker:</h3>
                 <input 
                     className={styles.input}
                     value={ticker} 
                     onChange={e => setTicker(e.target.value)} 
                     type="text" 
-                    placeholder="Enter your coin address" 
+                    placeholder="Enter the ticker for the token you'd like to view" 
                 />
                 <button onClick={handleButton} className={styles.button}>Get Token Info</button>
             {token && (
@@ -39,7 +39,6 @@ export default function Balance() {
     )
 
     async function handleButton() {
-        console.log("hehehehhe")
         var token = await getToken(ticker);
         setToken(token);
     }
