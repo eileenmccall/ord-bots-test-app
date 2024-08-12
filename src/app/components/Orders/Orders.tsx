@@ -8,7 +8,7 @@ interface OrdersProps {
 }
 
 export default function Orders ({ orders }: OrdersProps) {
-    var [ activeTab, setActiveTab ] = useState(0);
+    const [ activeTab, setActiveTab ] = useState(0);
 
     return (
         <section>
@@ -41,16 +41,19 @@ export default function Orders ({ orders }: OrdersProps) {
                             aria-labelledby={`order-${index}`}
                             className={`${styles.tabPanel} ${activeTab === index ? "" : styles.hidden}`}
                         >
-                            <p>Amount: {order.amount}</p>
-                            <p>Chain Fee: {order.chainFee}</p>
-                            <p>Status: {order.status}</p>
-                            <p>State: {order.state}</p>
-                            <p>Order Type: {order.orderType}</p>
+                            <h3>Order ID:</h3>
+                            <p>{order.id}</p>
+                            <div className={styles.orderDetails}>
+                                <div><h4>Amount:</h4><p>{order.amount}</p></div>
+                                <div><h4>Chain Fee:</h4><p>{order.chainFee}</p></div>
+                                <div><h4>Status:</h4><p>{order.status}</p></div>
+                                <div><h4>State:</h4><p>{order.state}</p></div>
+                                <div><h4>Order Type:</h4><p> {order.orderType}</p></div>
+                                <div><h4>Created At:</h4><p>{new Date(order.createdAt).toLocaleDateString()}</p></div>
+                            </div>
                         </article>
                     ))
                 }
         </section>
     );
-
-    function handleTabClick () {}
 }

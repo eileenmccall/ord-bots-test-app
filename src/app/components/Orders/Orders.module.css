@@ -35,3 +35,14 @@
     border-radius: 0 0 10px 10px;
 }
 
+.orderDetails {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.orderDetails > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

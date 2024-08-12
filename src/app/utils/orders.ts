@@ -1,12 +1,11 @@
+import { getHeaders } from "./headers";
+
 export async function getOrder(orderId: string) {
     const path = "https://api.ordinalsbot.com/order";
     const queryPath = `${path}?id=${orderId}`;
+    const headers = getHeaders();
 
-    var headers: HeadersInit = new Headers();
-    headers.set("x-api-key", process.env.API_KEY || "");
-    headers.set("Content-Type", "application/json");
-
-    var response = await fetch(queryPath, {
+    const response = await fetch(queryPath, {
         headers,
     });
 

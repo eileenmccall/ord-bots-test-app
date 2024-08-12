@@ -6,8 +6,8 @@ import { Token } from "@/app/types/token.type";
 
 
 export default function Balance() {
-    var [ticker, setTicker] = useState("");
-    var [token, setToken] = useState<Token | null>(null);
+    const [ticker, setTicker] = useState("");
+    const [token, setToken] = useState<Token | null>(null);
 
     return (
         <section>
@@ -20,7 +20,7 @@ export default function Balance() {
                     value={ticker} 
                     onChange={e => setTicker(e.target.value)} 
                     type="text" 
-                    placeholder="Enter the ticker for the token you'd like to view" 
+                    placeholder="(e.g. 'punk', 'doge', 'shib')"
                 />
                 <button onClick={handleButton} className={styles.button}>Get Token Info</button>
             {token && (
@@ -39,7 +39,7 @@ export default function Balance() {
     )
 
     async function handleButton() {
-        var token = await getToken(ticker);
+        const token = await getToken(ticker);
         setToken(token);
     }
 }

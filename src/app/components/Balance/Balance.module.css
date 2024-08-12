@@ -16,7 +16,7 @@
 }
 
 .button {
-    background: linear-gradient(90deg, #edfb65, #f3bd49);
+    background: linear-gradient(90deg,#e7fa33,#f0ac19);
     margin-top: 30px;
     width: 100%;
     color: #262626;
@@ -24,4 +24,9 @@
     padding: 10px 30px;
     border: none;
     margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(90deg,#edfb65,#f3bd49);
 }

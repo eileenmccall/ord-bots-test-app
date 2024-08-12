@@ -1,12 +1,10 @@
 "use client";
-import Link from "next/link";
 import styles from "./Nav.module.css";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Nav() {
-    var pathname = usePathname();
-    var navConfig = [
+    const pathname = usePathname();
+    const navConfig = [
         {
             route: "/",
             label: "Home",
